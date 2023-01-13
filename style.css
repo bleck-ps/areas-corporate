@@ -1,0 +1,126 @@
+@font-face {
+    font-family: dm-sans;
+    src: url(fonts/DMSans-Medium.ttf);
+}
+@font-face {
+    font-family: dm-sans-regular;
+    src: url(fonts/DMSans-Regular.ttf);
+}
+* {
+    margin: 0px;
+}
+body {
+    background: #fff;
+    font-family:"dm-sans" ;
+    flex-wrap: wrap;
+}
+header {
+    background: #1a2a43;
+    width: 100%;
+    height: 100px;
+    padding: 30px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header > img {
+    height: 80%;
+}
+
+
+.tarjeta {
+    width: 80%;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.infoclick {
+    font-family: "dm-sans-regular";
+    text-align: center;
+}
+.latarjeta {
+    width: 100%;
+    margin: 20px auto;
+    justify-content: center;
+    position: relative;
+}
+.latarjeta div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: 1s ease;
+    margin-top: 10px;
+}
+.latarjeta div img {
+    width: 80%;
+}
+.latarjeta .front {
+    transform: perspective(500px) rotateY(0deg);
+}
+.latarjeta .back {
+    transform: perspective(500px) rotateY(180deg);
+}
+.latarjeta:hover .front {
+    transform: perspective(500px) rotateY(180deg);
+}
+.latarjeta:hover .back {
+    transform: perspective(500px) rotateY(360deg);
+}
+.lainfo {
+    width: 100%;
+    text-align: center;
+}
+.saldo {
+    width: 80%;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+}
+.saldo h3  {
+    text-align: center;
+    width: 65%;
+    border-bottom: 3px solid #000;
+    border-right: 2px solid #000;
+    color: #FF8024;
+    font-family: "dm-sans-regular";
+}
+.saldo p {
+    width: 35%;
+    text-align: center;
+    border-bottom: 3px solid #000;
+}
+.movimientos {
+    width: 80%;
+    margin: 10px auto;
+}
+.movimientos h2 {
+    color: #FF8024;
+    text-align: center;
+}
+.movimientos .mov {
+    display: flex;
+    flex-direction: column;
+}
+.movimientos .mov .tran {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+.movimientos .mov .tran .cost {
+    width: 15%;
+}
+.movimientos .mov .tran div {
+    margin-top: 10px;
+    border-bottom: 2px solid #e1e1e1;
+}
+.movimientos .mov .tran .date {
+    width: 35%;
+}
+.movimientos .mov .tran .loc {
+    width: 50%;
+    font-weight: bold;
+}
